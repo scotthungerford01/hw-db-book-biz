@@ -17,12 +17,15 @@ Properties
 -- Address
 -- Phone
 
+
 - Books
 -- BookID
 -- Name
 -- Price
 -- Date
 -- PublisherID
+-- Genre
+-- Royalty
 
 - Publishers
 -- PublisherID
@@ -44,10 +47,15 @@ Properties
 
 - Customer
 -- CustomerID
--- NAme
+-- Name
 -- Contact
 -- BillingAddress
 -- ShippingAddress
+
+- Genre
+-- BookID
+-- PublisherID
+-- AuthorID
 
 
 
@@ -87,5 +95,6 @@ Relationships
 - Sales, Customer, N:1
 - Book, Sales, N:N
 - Customer, Order, 1:N
+- Book, Genre, N:N
 
 
