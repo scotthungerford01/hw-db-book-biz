@@ -1,0 +1,91 @@
+1) Entities and Properties
+
+Entities
+
+- Author
+- Book
+- Publisher
+- Sales
+- Customer
+- Editor
+
+Properties
+
+- Author
+-- AuthorID
+-- Name
+-- Address
+-- Phone
+
+- Books
+-- BookID
+-- Name
+-- Price
+-- Date
+-- PublisherID
+
+- Publishers
+-- PublisherID
+-- Name
+-- Address
+
+- Editors
+-- EditorID
+-- Name
+-- Address
+-- Contact
+
+- Sales
+-- OrderID
+-- OrderDAte
+-- CustomerID
+-- ISBN
+-- Amount
+
+- Customer
+-- CustomerID
+-- NAme
+-- Contact
+-- BillingAddress
+-- ShippingAddress
+
+
+
+
+
+
+- Book title
+- Book price
+- Book date
+- Author name
+- Author address
+- Author contact
+- Editor name
+- Editor address
+- Publisher name
+- Publisher address
+- Customer address
+- Customer name
+
+
+Unique identifieres - Primary Keys
+
+- AuthorID (pk)
+- ISBN (pk)
+- BookID
+- Publisher ID (pk)
+- Editor ID (pk)
+- Customer ID (pk)
+- Order ID (pk)
+
+
+Relationships
+
+- Book, Author, 1:N
+- Book, Publisher, N:1
+- Book, Editor, N:N
+- Sales, Customer, N:1
+- Book, Sales, N:N
+- Customer, Order, 1:N
+
+
