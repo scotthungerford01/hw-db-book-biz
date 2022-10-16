@@ -20,29 +20,28 @@ Properties
 
 - Books
 -- BookID
--- Name
--- Price
--- Date
+-- BookName
+-- BookPrice
+-- AuthorID
 -- PublisherID
 -- Genre
 -- Royalty
+-- EditorID
 
 - Publishers
 -- PublisherID
--- Name
--- Address
+-- PublisherName
+
 
 - Editors
 -- EditorID
--- Name
--- Address
--- Contact
+-- EditorName
 
-- Sales
+
+- Orders
 -- OrderID
--- OrderDAte
+-- OrderDate
 -- CustomerID
--- ISBN
 -- Amount
 
 - Customer
@@ -52,28 +51,6 @@ Properties
 -- BillingAddress
 -- ShippingAddress
 
-- Genre
--- BookID
--- PublisherID
--- AuthorID
-
-
-
-
-
-
-- Book title
-- Book price
-- Book date
-- Author name
-- Author address
-- Author contact
-- Editor name
-- Editor address
-- Publisher name
-- Publisher address
-- Customer address
-- Customer name
 
 
 Unique identifieres - Primary Keys
@@ -89,11 +66,11 @@ Unique identifieres - Primary Keys
 
 Relationships
 
-- Book, Author, 1:N
+- Book, Author, N:1
 - Book, Publisher, N:1
-- Book, Editor, N:N
-- Sales, Customer, N:1
-- Book, Sales, N:N
+- Book, Editor, N:1
+- Order, Customer, N:1
+- Book, Orders, N:N
 - Customer, Order, 1:N
 - Book, Genre, N:N
 
